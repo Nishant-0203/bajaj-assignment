@@ -4,6 +4,18 @@ import { validateBfhlInput } from '../middleware/validation.js';
 
 const router = express.Router();
 
+// GET / - Root endpoint
+router.get('/', (req, res) => {
+  res.status(200).json({
+    is_success: true,
+    message: 'BFHL API is running',
+    endpoints: {
+      health: 'GET /health',
+      bfhl: 'POST /bfhl'
+    }
+  });
+});
+
 // GET /health
 router.get('/health', healthCheck);
 
