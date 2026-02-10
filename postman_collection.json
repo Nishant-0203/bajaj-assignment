@@ -1,0 +1,214 @@
+{
+  "info": {
+    "name": "Chitkara Qualifier API",
+    "description": "API collection for Chitkara University qualifier project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["health"]
+        },
+        "description": "Check API health status"
+      },
+      "response": []
+    },
+    {
+      "name": "Fibonacci",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fibonacci\": 7\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Generate Fibonacci series of length n"
+      },
+      "response": []
+    },
+    {
+      "name": "Prime Numbers",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prime\": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Filter prime numbers from array"
+      },
+      "response": []
+    },
+    {
+      "name": "LCM",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"lcm\": [12, 15, 20]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Calculate LCM of array"
+      },
+      "response": []
+    },
+    {
+      "name": "HCF",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"hcf\": [12, 18, 24]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Calculate HCF/GCD of array"
+      },
+      "response": []
+    },
+    {
+      "name": "AI Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"AI\": \"What is the capital of France?\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Ask AI a question and get one-word answer"
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Multiple Keys",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fibonacci\": 5,\n  \"prime\": [2, 3, 4]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Test error handling - multiple keys"
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Invalid Key",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"invalid\": 123\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Test error handling - invalid key"
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Empty Body",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bfhl",
+          "host": ["{{baseUrl}}"],
+          "path": ["bfhl"]
+        },
+        "description": "Test error handling - empty body"
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
